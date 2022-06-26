@@ -1,0 +1,11 @@
+INDEX VERSION 1.131
+C:\SIAT\Spring\personalProject\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3178133098.index
+\ex00\src\main\java
+C:\SIAT\Spring\personalProject\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3118333192.index
+\ex00_practice\src\main\java
+C:\SIAT\Spring\personalProject\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\115703133.index
+\WebSocket_chat_ver01\src\main\java
+C:\SIAT\Spring\personalProject\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\365773870.index
+\WebSocket_chat_ver02\src\main\java
+C:\SIAT\Spring\personalProject\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2430703886.index
+\Websocketchat02\src\main\java

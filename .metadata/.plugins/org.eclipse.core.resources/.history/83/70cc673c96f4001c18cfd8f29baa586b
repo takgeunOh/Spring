@@ -1,0 +1,20 @@
+package com.websocket.chat.config;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@EnableWebSocketMessageBroker
+public class WebSockConfig implements WebSocketMessageBrokerConfigurer {
+
+    @Override
+    public void configureMessageBroker(MessageBrokerRegistry config) {
+        config.enableSimpleBroker("/sub");
+        config.setApplicationDestinationPrefixes("/pub");
+    }
+
+    @Override
+    public void registerStompEndpoints(StompEndpointRegistry registry) {
+        registry.addEndpoint("/ws-stomp").setAllowedOriginPatterns("*")
+                .withSockJS();
+    }
+}

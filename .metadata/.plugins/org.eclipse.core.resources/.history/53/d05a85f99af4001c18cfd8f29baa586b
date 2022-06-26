@@ -1,0 +1,39 @@
+package com.websocket.chat.repo;
+
+import com.websocket.chat.model.ChatRoom;
+import org.springframework.stereotype.Repository;
+
+import javax.annotation.PostConstruct;
+import java.util.*;
+import java.util.stream.Collectors;
+
+// 채팅방 정보는 초기화 되지 않도록 생성 시 Redis Hash에 저장되도록 처리
+// 채팅방 정보 조회할 떄는 Redis Hash에 저장된 데이터를 불러오도록 메서드 내용 수정
+// 채팅방 입장 시 채팅방 id로 Redis topic을 조회하여 pub/sub 메시지 리스너와 연동
+@Repository
+public class ChatRoomRepository {
+
+    private Map<String, ChatRoom> chatRoomMap;
+
+    @PostConstruct
+    private void init() {
+        chatRoomMap = new LinkedHashMap<>();
+    }
+
+    public List<ChatRoom> findAllRoom() {
+        // 채팅방 생성순서 최근 순으로 반환
+        List chatRooms = new ArrayList<>(chatRoomMap.values());
+        Collections.reverse(chatRooms);
+        return chatRooms;
+    }
+
+    public ChatRoom findRoomById(String id) {
+        return chatRoomMap.get(id);
+    }
+
+    public ChatRoom createChatRoom(String name) {
+        ChatRoom chatRoom = ChatRoom.create(name);
+        chatRoomMap.put(chatRoom.getRoomId(), chatRoom);
+        return chatRoom;
+    }
+}

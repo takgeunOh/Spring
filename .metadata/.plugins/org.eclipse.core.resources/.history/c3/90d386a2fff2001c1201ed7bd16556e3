@@ -1,0 +1,5 @@
+package com.websocket.chat.controller;
+
+public class ChatRoomController {
+
+}

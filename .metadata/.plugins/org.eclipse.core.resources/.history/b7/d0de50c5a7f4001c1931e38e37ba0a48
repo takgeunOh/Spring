@@ -1,0 +1,7 @@
+spring:
+  config:
+    activate:
+      on-profile: alpha
+  redis:
+    host: Standalone Redis 192.168.219.184
+    port: Standalone Redis 8090

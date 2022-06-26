@@ -1,0 +1,15 @@
+package com.websocket.chat.repo;
+
+import org.springframework.stereotype.Repository;
+
+
+// 채팅방을 생성하고 정보를 조회하는 Repository 생성
+// 여기서는 채팅방 정보를 Map으로 간단하게 관리할 것.
+// 실제 서비스에서는 DB나 다른 저장 매체에 채팅방 정보를 저장하도록 구현해야 한다.
+
+// ChatService는 ChatRoomRepository가 대체하므로 삭제
+
+@Repository
+public class ChatRoomRepository {
+
+}

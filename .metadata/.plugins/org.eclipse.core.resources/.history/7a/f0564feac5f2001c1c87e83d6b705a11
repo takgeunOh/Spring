@@ -1,0 +1,6 @@
+rootProject.name = 'Websocketchat'
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+    }
+}

@@ -1,0 +1,5 @@
+package com.websocket.model;
+
+public class ChatRoom {
+
+}

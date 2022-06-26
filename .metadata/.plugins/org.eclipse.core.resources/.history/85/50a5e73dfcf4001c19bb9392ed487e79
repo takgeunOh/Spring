@@ -1,0 +1,5 @@
+package com.websocket.chat.config.handler;
+
+public class StompHandler {
+
+}

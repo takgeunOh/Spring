@@ -1,0 +1,11 @@
+spring:
+  config:
+    activate:
+      on-profile: local
+  devtools:
+    livereload:
+      enabled: true
+    restart:
+      enabled: false
+  freemarker:
+    cache: false
